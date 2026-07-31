@@ -4,28 +4,37 @@
 
 - ChatGPT (OpenAI)
 
-## How AI Assisted
+## 1. AI-generated vs. my own work
 
-This was my first time using Swagger and automated testing with Jest and Supertest. I used ChatGPT to:
+I used ChatGPT as a learning assistant throughout the project.
 
-- Understand the assignment requirements.
-- Learn how to integrate Swagger documentation.
-- Learn how to write API tests using Jest and Supertest.
-- Understand Express.js concepts, routing, validation, and error handling.
-- Debug issues related to routing, module imports, Swagger, and testing.
+AI assisted with:
+- Explaining the project requirements.
+- Suggesting the initial project structure.
+- Providing guidance for implementing REST API endpoints.
+- Explaining and helping integrate Swagger/OpenAPI documentation.
+- Explaining how to write automated tests using Jest and Supertest.
+- Helping debug issues related to routing, validation, module imports, Swagger, and testing.
 
-## My Contribution
+I completed the implementation by:
+- Creating and organizing the project files.
+- Integrating the routes, controllers, services, and utilities.
+- Connecting all components together.
+- Running the application and fixing issues.
+- Testing every endpoint using Postman and Swagger.
+- Running and fixing the Jest test suite until all tests passed.
 
-I implemented the project, integrated the API endpoints, tested the application using Postman and Swagger, and ran the Jest test suite. I reviewed and understood the AI suggestions before applying them and fixed issues during development.
+## 2. What I validated, tested, or changed
 
-## Verification
+I reviewed and tested the AI suggestions before using them.
 
-I verified the project by:
+I verified the implementation by:
+- Testing all API endpoints with Postman.
+- Using Swagger UI to verify the API documentation.
+- Running `npm test` to ensure all automated tests passed.
 
-- Testing all endpoints in Postman.
-- Using Swagger UI to test the API.
-- Running `npm test` until all tests passed.
+During development, I modified and corrected AI suggestions while fixing issues such as routing errors, module import problems, validation logic, and test failures until the application worked correctly.
 
-## AI Suggestions Not Used
+## 3. AI suggestions not used
 
-I did not implement additional features beyond the assignment requirements. I chose Swagger as the single optional bonus feature and kept the project focused on the required functionality.
+I chose not to implement additional features beyond the assignment requirements. I selected Swagger as the single optional bonus feature and did not add extra functionality that was outside the requested scope.
