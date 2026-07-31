@@ -74,6 +74,10 @@ const deleteExpense = (req, res, next) => {
 
         res.status(204).send();
 
+        return res.status(200).json({
+            message: "Expense deleted successfully."
+        });
+
     } catch (error) {
         next(error);
     }

@@ -1,9 +1,44 @@
 [
   {
-    "id": "f60abcb9-312e-4378-ab6c-b6d6837c6dd7",
+    "id": "e507e44a-52fe-432c-9466-421bdd078ca4",
     "title": "Pizza",
-    "amount": 300,
+    "amount": 350,
     "category": "Food",
     "date": "2026-07-31"
+  },
+  {
+    "id": "e5956e7a-f222-463f-994d-ea550cd57381",
+    "title": "Bus Ticket",
+    "amount": 350,
+    "category": "Travel",
+    "date": "2026-07-31"
+  },
+  {
+    "id": "dc4e3671-c067-4d0e-a228-3b0df0c05a1c",
+    "title": "Movie Ticket",
+    "amount": 250,
+    "category": "Entertainment",
+    "date": "2026-07-28"
+  },
+  {
+    "id": "03726c4b-ea61-4db0-9e3e-90e434e2dd38",
+    "title": "Groceries",
+    "amount": 1450,
+    "category": "Grocery",
+    "date": "2026-07-27"
+  },
+  {
+    "id": "9f343e14-09ef-4a7c-ac9c-d2325649a15f",
+    "title": "Medicines",
+    "amount": 620,
+    "category": "Medical",
+    "date": "2026-07-26"
+  },
+  {
+    "id": "67c415bb-22f9-4c5f-b506-804689846d50",
+    "title": "T-Shirt",
+    "amount": 799,
+    "category": "Shopping",
+    "date": "2026-07-29"
   }
 ]

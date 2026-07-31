@@ -4,10 +4,16 @@ const app = express();
 
 const expenseRoutes = require("./routes/expenseRoutes");
 
+const swaggerUi = require("swagger-ui-express");
+
+const swaggerSpec = require("./swagger");
+
 app.use(express.json());
 
 // Routes
 app.use("/expenses", expenseRoutes);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Home Route
 app.get("/", (req, res) => {
