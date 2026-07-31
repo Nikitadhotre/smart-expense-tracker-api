@@ -1,11 +1,11 @@
-const { v4: uuidv4 } = require("uuid");
+const { randomUUID } = require("crypto");
 const { readExpenses, writeExpenses } = require("../utils/fileHelper");
 
 const addExpense = (data) => {
     const expenses = readExpenses();
 
     const expense = {
-        id: uuidv4(),
+        id: randomUUID(),
         title: data.title,
         amount: data.amount,
         category: data.category,

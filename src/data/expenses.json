@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": "f60abcb9-312e-4378-ab6c-b6d6837c6dd7",
+    "title": "Pizza",
+    "amount": 300,
+    "category": "Food",
+    "date": "2026-07-31"
+  }
+]
