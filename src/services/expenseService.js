@@ -55,7 +55,9 @@ const getTotalExpenses = (category) => {
 const deleteExpense = (id) => {
     const expenses = readExpenses();
 
-    const filteredExpenses = expenses.filter((expense) => expense.id !== id);
+    const filteredExpenses = expenses.filter(
+        (expense) => expense.id !== id
+    );
 
     if (filteredExpenses.length === expenses.length) {
         return false;

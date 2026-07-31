@@ -1,39 +1,82 @@
 const expenseService = require("../services/expenseService");
 
-const addExpense = (req, res) => {
-    const expense = expenseService.addExpense(req.body);
+const addExpense = (req, res, next) => {
+    try {
+        const { title, amount, category, date } = req.body;
 
-    res.status(201).json(expense);
-};
+        // Required fields
+        if (!title || amount === undefined || !category || !date) {
+            return res.status(400).json({
+                message: "Title, amount, category and date are required."
+            });
+        }
 
-const getAllExpenses = (req, res) => {
-    const { category } = req.query;
+        // Amount validation
+        if (typeof amount !== "number" || amount <= 0) {
+            return res.status(400).json({
+                message: "Amount must be a positive number."
+            });
+        }
 
-    const expenses = expenseService.getAllExpenses(category);
+        // Date validation
+        if (isNaN(Date.parse(date))) {
+            return res.status(400).json({
+                message: "Invalid date format."
+            });
+        }
 
-    res.status(200).json(expenses);
-};
+        const expense = expenseService.addExpense(req.body);
 
-const getTotalExpenses = (req, res) => {
-    const { category } = req.query;
+        res.status(201).json(expense);
 
-    const result = expenseService.getTotalExpenses(category);
-
-    res.status(200).json(result);
-};
-
-const deleteExpense = (req, res) => {
-    const { id } = req.params;
-
-    const deleted = expenseService.deleteExpense(id);
-
-    if (!deleted) {
-        return res.status(404).json({
-            message: "Expense not found"
-        });
+    } catch (error) {
+        next(error);
     }
+};
 
-    res.status(204).send();
+const getAllExpenses = (req, res, next) => {
+    try {
+        const { category } = req.query;
+
+        const expenses = expenseService.getAllExpenses(category);
+
+        res.status(200).json(expenses);
+
+    } catch (error) {
+        next(error);
+    }
+};
+
+const getTotalExpenses = (req, res, next) => {
+    try {
+        const { category } = req.query;
+
+        const result = expenseService.getTotalExpenses(category);
+
+        res.status(200).json(result);
+
+    } catch (error) {
+        next(error);
+    }
+};
+
+const deleteExpense = (req, res, next) => {
+    try {
+        const { id } = req.params;
+
+        const deleted = expenseService.deleteExpense(id);
+
+        if (!deleted) {
+            return res.status(404).json({
+                message: "Expense not found."
+            });
+        }
+
+        res.status(204).send();
+
+    } catch (error) {
+        next(error);
+    }
 };
 
 module.exports = {
