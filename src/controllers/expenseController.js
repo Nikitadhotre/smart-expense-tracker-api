@@ -6,16 +6,14 @@ const addExpense = (req, res) => {
     res.status(201).json(expense);
 };
 
-module.exports = {
-    addExpense
-};
-
-
 const getAllExpenses = (req, res) => {
-    const expenses = expenseService.getAllExpenses();
+    const { category } = req.query;
+
+    const expenses = expenseService.getAllExpenses(category);
 
     res.status(200).json(expenses);
 };
+
 module.exports = {
     addExpense,
     getAllExpenses

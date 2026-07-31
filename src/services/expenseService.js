@@ -19,8 +19,17 @@ const addExpense = (data) => {
     return expense;
 };
 
-const getAllExpenses = () => {
-    return readExpenses();
+const getAllExpenses = (category) => {
+    const expenses = readExpenses();
+
+    if (category) {
+        return expenses.filter(
+            (expense) =>
+                expense.category.toLowerCase() === category.toLowerCase()
+        );
+    }
+
+    return expenses;
 };
 
 module.exports = {
