@@ -14,7 +14,16 @@ const getAllExpenses = (req, res) => {
     res.status(200).json(expenses);
 };
 
+const getTotalExpenses = (req, res) => {
+    const { category } = req.query;
+
+    const result = expenseService.getTotalExpenses(category);
+
+    res.status(200).json(result);
+};
+
 module.exports = {
     addExpense,
-    getAllExpenses
+    getAllExpenses,
+    getTotalExpenses
 };

@@ -32,7 +32,28 @@ const getAllExpenses = (category) => {
     return expenses;
 };
 
+const getTotalExpenses = (category) => {
+    let expenses = readExpenses();
+
+    if (category) {
+        expenses = expenses.filter(
+            (expense) =>
+                expense.category.toLowerCase() === category.toLowerCase()
+        );
+    }
+
+    const total = expenses.reduce(
+        (sum, expense) => sum + Number(expense.amount),
+        0
+    );
+
+    return {
+        total
+    };
+};
+
 module.exports = {
     addExpense,
-    getAllExpenses
+    getAllExpenses,
+    getTotalExpenses
 };
