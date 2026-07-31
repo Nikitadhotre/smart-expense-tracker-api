@@ -10,9 +10,8 @@ I used ChatGPT as a learning assistant throughout the project.
 
 AI assisted with:
 - Explaining the project requirements.
-- Suggesting the initial project structure.
 - Providing guidance for implementing REST API endpoints.
-- Explaining and helping integrate Swagger/OpenAPI documentation.
+- Explaining and helping integrate Swagger documentation.
 - Explaining how to write automated tests using Jest and Supertest.
 - Helping debug issues related to routing, validation, module imports, Swagger, and testing.
 
