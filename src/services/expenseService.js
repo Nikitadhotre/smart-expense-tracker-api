@@ -52,8 +52,23 @@ const getTotalExpenses = (category) => {
     };
 };
 
+const deleteExpense = (id) => {
+    const expenses = readExpenses();
+
+    const filteredExpenses = expenses.filter((expense) => expense.id !== id);
+
+    if (filteredExpenses.length === expenses.length) {
+        return false;
+    }
+
+    writeExpenses(filteredExpenses);
+
+    return true;
+};
+
 module.exports = {
     addExpense,
     getAllExpenses,
-    getTotalExpenses
+    getTotalExpenses,
+    deleteExpense
 };

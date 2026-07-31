@@ -22,8 +22,23 @@ const getTotalExpenses = (req, res) => {
     res.status(200).json(result);
 };
 
+const deleteExpense = (req, res) => {
+    const { id } = req.params;
+
+    const deleted = expenseService.deleteExpense(id);
+
+    if (!deleted) {
+        return res.status(404).json({
+            message: "Expense not found"
+        });
+    }
+
+    res.status(204).send();
+};
+
 module.exports = {
     addExpense,
     getAllExpenses,
-    getTotalExpenses
+    getTotalExpenses,
+    deleteExpense
 };

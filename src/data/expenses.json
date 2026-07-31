@@ -1,16 +1,1 @@
-[
-  {
-    "id": "08317b0c-5fd1-4b96-be4b-334db2a9808b",
-    "title": "Pizza",
-    "amount": 350,
-    "category": "Food",
-    "date": "2026-07-31"
-  },
-  {
-    "id": "0e8dd73d-acc1-465e-becd-905faeb6a16c",
-    "title": "Bus Ticket",
-    "amount": 40,
-    "category": "Travel",
-    "date": "2026-07-31"
-  }
-]
+[]
