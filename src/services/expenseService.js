@@ -1,8 +1,8 @@
 const { v4: uuidv4 } = require("uuid");
-
-const expenses = [];
+const { readExpenses, writeExpenses } = require("../utils/fileHelper");
 
 const addExpense = (data) => {
+    const expenses = readExpenses();
 
     const expense = {
         id: uuidv4(),
@@ -14,9 +14,16 @@ const addExpense = (data) => {
 
     expenses.push(expense);
 
+    writeExpenses(expenses);
+
     return expense;
 };
 
+const getAllExpenses = () => {
+    return readExpenses();
+};
+
 module.exports = {
-    addExpense
+    addExpense,
+    getAllExpenses
 };

@@ -9,3 +9,14 @@ const addExpense = (req, res) => {
 module.exports = {
     addExpense
 };
+
+
+const getAllExpenses = (req, res) => {
+    const expenses = expenseService.getAllExpenses();
+
+    res.status(200).json(expenses);
+};
+module.exports = {
+    addExpense,
+    getAllExpenses
+};
